@@ -6,13 +6,11 @@ import analyzer.ClassInfo;
 
 public class AbcCalculator {
 
-    public static int totalAssignments(Map<String, ClassInfo> classes) {
-        int sum = 0;
+    public static double totalAssignments(Map<String, ClassInfo> classes) {
+        int totalA = classes.values().stream().mapToInt(c -> c.assignmentCount).sum();
+        int totalB = classes.values().stream().mapToInt(c -> c.branchCount).sum();
+        int totalC = classes.values().stream().mapToInt(c -> c.conditionCount).sum();
 
-        for (ClassInfo cls : classes.values()) {
-            sum += cls.assignmentCount;
-        }
-
-        return sum;
+        return Math.sqrt(totalA*totalA + totalB*totalB + totalC*totalC);
     }
 }

@@ -5,7 +5,7 @@ import metrics.InheritanceStats;
 public class MetricsResult {
 
     public int classesAnalyzed;
-    public int abcAssignments;
+    public double abc;
 
     public int maxInheritanceDepth;
     public double avgInheritanceDepth;
@@ -15,13 +15,13 @@ public class MetricsResult {
 
     public MetricsResult(
             int classesAnalyzed,
-            int abcAssignments,
+            double abc,
             InheritanceStats inheritanceStats,
             double avgOverriddenMethods,
             double avgFieldsPerClass
     ) {
         this.classesAnalyzed = classesAnalyzed;
-        this.abcAssignments = abcAssignments;
+        this.abc = abc;
         this.maxInheritanceDepth = inheritanceStats.maxDepth();
         this.avgInheritanceDepth = inheritanceStats.avgDepth();
         this.avgOverriddenMethods = avgOverriddenMethods;

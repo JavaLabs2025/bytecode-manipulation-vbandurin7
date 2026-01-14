@@ -10,6 +10,8 @@ public class ClassInfo {
 
     public int fieldsCount = 0;
     public int assignmentCount = 0;
+    public int branchCount = 0;
+    public int conditionCount = 0;
 
     public ClassInfo(String name, String superName) {
         this.name = name;

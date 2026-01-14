@@ -61,7 +61,7 @@ public class JarAnalyzer {
         InheritanceStats depthStats =
                 InheritanceDepthCalculator.calculate(classes);
 
-        int totalAssignments =
+        double abc =
                 AbcCalculator.totalAssignments(classes);
 
         double avgOverriddenMethods =
@@ -72,7 +72,7 @@ public class JarAnalyzer {
 
         MetricsResult result = new MetricsResult(
                 classes.size(),
-                totalAssignments,
+                abc,
                 depthStats,
                 avgOverriddenMethods,
                 avgFields
@@ -86,7 +86,7 @@ public class JarAnalyzer {
     private static void printToConsole(MetricsResult r) {
         System.out.println("====== Metrics ======");
         System.out.println("Classes analyzed: " + r.classesAnalyzed);
-        System.out.println("ABC (assignments): " + r.abcAssignments);
+        System.out.println("ABC (assignments): " + r.abc);
         System.out.println("Max inheritance depth: " + r.maxInheritanceDepth);
         System.out.println("Avg inheritance depth: " + r.avgInheritanceDepth);
         System.out.println("Avg overridden methods: " + r.avgOverriddenMethods);
