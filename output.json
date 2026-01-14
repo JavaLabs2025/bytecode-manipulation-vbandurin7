@@ -1,0 +1,8 @@
+{
+  "classesAnalyzed" : 330,
+  "abcAssignments" : 1655,
+  "maxInheritanceDepth" : 5,
+  "avgInheritanceDepth" : 1.4393939393939394,
+  "avgOverriddenMethods" : 2.2790697674418605,
+  "avgFieldsPerClass" : 2.609090909090909
+}
